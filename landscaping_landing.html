@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Anchor Outdoors | Text for Same Day Quote | 25% Off First Service</title>
+    <meta name="description" content="Young, local brothers providing pressure washing, lawn care & outdoor services. Text us for same-day free quote + 25% off first service!">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #0f172a;
+            line-height: 1.6;
+            background: #fff;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid #3b82f6;
+            padding: 12px 20px;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: white;
+        }
+
+        .logo-icon {
+            font-size: 1.6rem;
+        }
+
+        .header-text {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .header-text a {
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 20px 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.15) 0%, transparent 50%);
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            text-align: left;
+        }
+
+        .hero-image-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+            border: 4px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .hero-image-wrapper::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(135deg, #3b82f6, #10b981, #3b82f6);
+            border-radius: 24px;
+            z-index: -1;
+            animation: borderGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes borderGlow {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .hero-image-placeholder {
+            width: 100%;
+            aspect-ratio: 4/5;
+            background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 16px;
+            font-size: 1.2rem;
+            color: #64748b;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .floating-anchor-hero {
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            font-size: 5rem;
+            opacity: 0.2;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .trust-badge-hero {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+            z-index: 10;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            animation: fadeInDown 0.6s ease-out;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            letter-spacing: -2px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero-tagline {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #3b82f6;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            animation: fadeInUp 1.2s ease-out;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1.4s ease-out;
+        }
+
+        .btn {
+            padding: 18px 36px;
+            border-radius: 12px;
+            font-size: 1.15rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
+            box-shadow: 0 10px 40px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 50px rgba(59, 130, 246, 0.5);
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Discount Banner */
+        .discount-banner {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+        }
+
+        .discount-banner span {
+            font-size: 2rem;
+            display: inline-block;
+            margin: 0 8px;
+        }
+
+        /* Services Grid */
+        .services-section {
+            padding: 80px 20px;
+            background: linear-gradient(to bottom, #f8fafc, #fff);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: #0f172a;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 28px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 36px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, #3b82f6, #10b981);
+            transform: scaleX(0);
+            transition: transform 0.4s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(59, 130, 246, 0.15);
+            border-color: #3b82f6;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .service-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 12px;
+        }
+
+        .service-desc {
+            color: #64748b;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        /* Before/After Gallery */
+        .gallery-section {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 28px;
+            margin-top: 50px;
+        }
+
+        .gallery-item {
+            background: #f8fafc;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+            border: 2px solid #e2e8f0;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            border-color: #3b82f6;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 280px;
+            background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slider-images {
+            display: flex;
+            transition: transform 0.4s ease-in-out;
+            height: 100%;
+        }
+
+        .slider-image {
+            min-width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            transition: background 0.3s;
+        }
+
+        .slider-nav:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .slider-nav.prev {
+            left: 10px;
+        }
+
+        .slider-nav.next {
+            right: 10px;
+        }
+
+        .slider-dots {
+            position: absolute;
+            bottom: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+
+        .slider-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .slider-dot.active {
+            background: white;
+            width: 24px;
+            border-radius: 4px;
+        }
+
+        .before-after-label {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            z-index: 10;
+        }
+
+        .gallery-badge {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .gallery-caption {
+            padding: 24px;
+        }
+
+        .gallery-title {
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: #0f172a;
+        }
+
+        .gallery-meta {
+            font-size: 0.95rem;
+            color: #64748b;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .contact-box {
+            max-width: 600px;
+            margin: 40px auto 0;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            border-radius: 24px;
+            padding: 48px;
+        }
+
+        .contact-icon {
+            font-size: 4rem;
+            margin-bottom: 24px;
+        }
+
+        .contact-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .contact-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #3b82f6;
+            margin: 24px 0;
+        }
+
+        .contact-number a {
+            color: #3b82f6;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-number a:hover {
+            color: #60a5fa;
+        }
+
+        .contact-note {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-top: 16px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #0f172a;
+            color: white;
+            padding: 40px 20px 30px;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .footer-tagline {
+            color: #3b82f6;
+            font-weight: 600;
+            margin-bottom: 24px;
+            font-size: 1rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        /* Floating Text Button (Mobile) */
+        .floating-text {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.5);
+            z-index: 999;
+            text-decoration: none;
+            animation: pulse 2s infinite;
+            transition: transform 0.3s;
+        }
+
+        .floating-text:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 10px 30px rgba(59, 130, 246, 0.5); transform: scale(1); }
+            50% { box-shadow: 0 15px 40px rgba(59, 130, 246, 0.7); transform: scale(1.05); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+            .hero-content {
+                text-align: center;
+            }
+            .hero-image-wrapper {
+                max-width: 100%;
+            }
+            .hero h1 { font-size: 2.5rem; }
+            .hero-tagline { font-size: 1.4rem; }
+            .hero-subtitle { font-size: 1.1rem; }
+            .section-title { font-size: 2rem; }
+            .cta-group { flex-direction: column; align-items: center; }
+            .btn { width: 90%; max-width: 320px; justify-content: center; }
+            .header { padding: 10px 15px; }
+            .logo { font-size: 1rem; }
+            .header-text { font-size: 0.75rem; }
+            .service-card { padding: 28px; }
+            .contact-box { padding: 32px 24px; }
+            .contact-number { font-size: 2rem; }
+            .floating-anchor-hero { font-size: 3rem; top: -20px; right: -20px; }
+        }
+
+        @media (max-width: 480px) {
+            .discount-banner { font-size: 1rem; }
+            .discount-banner span { font-size: 1.5rem; }
+            .gallery-grid { grid-template-columns: 1fr; }
+            .services-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <span class="logo-icon">⚓</span>
+            <div>
+                <div>BLUE ANCHOR</div>
+                <div style="font-size: 0.65rem; font-weight: 600; color: #3b82f6;">OUTDOORS</div>
+            </div>
+        </div>
+        <div class="header-text">
+            Text us: <a href="sms:+17703769981">770-376-9981</a>
+        </div>
+    </header>
+
+    <!-- Discount Banner -->
+    <div class="discount-banner">
+        🎉 <span>25%</span> OFF YOUR FIRST SERVICE! <span>🎉</span> Fill out the form below to claim your discount
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-anchor">⚓</div>
+            <h1>BLUE ANCHOR OUTDOORS</h1>
+            <p class="hero-tagline">Young • Local • Ambitious</p>
+            <p class="hero-subtitle">Pressure Washing • Lawn Care • Outdoor Services</p>
+            <div class="cta-group">
+                <a href="#contact-form" class="btn btn-primary">
+                    📝 Get Your Free Quote
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">🌟 What We Do</div>
+                <h2 class="section-title">Everything Your Property Needs</h2>
+                <p class="section-subtitle">We're two brothers who take pride in every job, big or small</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💧</div>
+                    <h3 class="service-title">Pressure Washing</h3>
+                    <p class="service-desc"><strong>Driveways • Patios • Houses</strong><br>We blast away years of dirt and grime. Your surfaces will look brand new.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🌱</div>
+                    <h3 class="service-title">Lawn Care</h3>
+                    <p class="service-desc"><strong>Cut • Edge • Weedeat • Blow</strong><br>Weekly maintenance or one-time cuts. We keep your lawn looking sharp.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🌿</div>
+                    <h3 class="service-title">Outdoor Services</h3>
+                    <p class="service-desc"><strong>Removals • Trimming • Installs</strong><br>Palm trees, shrubs, mulch, cleanup—if it's outside, we handle it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before/After Gallery -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">✨ Our Work</div>
+                <h2 class="section-title">See What We Can Do</h2>
+                <p class="section-subtitle">Real jobs from real customers. No stock photos, just our work.<br><small style="color: #3b82f6; font-weight: 600;">Need something else? We handle it all—landscaping, installs, cleanups & more.</small></p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <div class="gallery-badge">BEFORE/AFTER</div>
+                        <div class="slider-container">
+                            <div class="slider-images" id="slider1">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%23dbeafe' width='800' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%233b82f6'%3EImage 1: House Before%3C/text%3E%3C/svg%3E" alt="Before - House & Driveway" class="slider-image">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%23dbeafe' width='800' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%233b82f6'%3EImage 2: House After%3C/text%3E%3C/svg%3E" alt="After - House & Driveway" class="slider-image">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%23dbeafe' width='800' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%233b82f6'%3EImage 3: Patio Before%3C/text%3E%3C/svg%3E" alt="Before - Patio" class="slider-image">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%23dbeafe' width='800' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%233b82f6'%3EImage 4: Patio After%3C/text%3E%3C/svg%3E" alt="After - Patio" class="slider-image">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%23dbeafe' width='800' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%233b82f6'%3EImage 5: Driveway Before%3C/text%3E%3C/svg%3E" alt="Before - Driveway" class="slider-image">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%23dbeafe' width='800' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%233b82f6'%3EImage 6: Driveway After%3C/text%3E%3C/svg%3E" alt="After - Driveway" class="slider-image">
+                            </div>
+                            <button class="slider-nav prev" onclick="moveSlide(1, -1)">‹</button>
+                            <button class="slider-nav next" onclick="moveSlide(1, 1)">›</button>
+                            <div class="slider-dots" id="dots1"></div>
+                            <div class="before-after-label" id="label1">BEFORE</div>
+                        </div>
+                    </div>
+                    <div class="gallery-caption">
+                        <div class="gallery-title">House & Driveway Pressure Wash</div>
+                        <div class="gallery-meta">Removed 5+ years of buildup • Swipe to see transformations</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <div class="gallery-badge">BEFORE/AFTER</div>
+                        <div class="slider-container">
+                            <div class="slider-images" id="slider2">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%23d1fae5' width='800' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%23059669'%3ELawn Before 1%3C/text%3E%3C/svg%3E" alt="Lawn Before 1" class="slider-image">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%23d1fae5' width='800' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%23059669'%3ELawn After 1%3C/text%3E%3C/svg%3E" alt="Lawn After 1" class="slider-image">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%23d1fae5' width='800' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%23059669'%3ELawn Before 2%3C/text%3E%3C/svg%3E" alt="Lawn Before 2" class="slider-image">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%23d1fae5' width='800' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%23059669'%3ELawn After 2%3C/text%3E%3C/svg%3E" alt="Lawn After 2" class="slider-image">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%23d1fae5' width='800' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%23059669'%3ELawn Before 3%3C/text%3E%3C/svg%3E" alt="Lawn Before 3" class="slider-image">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%23d1fae5' width='800' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%23059669'%3ELawn After 3%3C/text%3E%3C/svg%3E" alt="Lawn After 3" class="slider-image">
+                            </div>
+                            <button class="slider-nav prev" onclick="moveSlide(2, -1)">‹</button>
+                            <button class="slider-nav next" onclick="moveSlide(2, 1)">›</button>
+                            <div class="slider-dots" id="dots2"></div>
+                            <div class="before-after-label" id="label2">BEFORE</div>
+                        </div>
+                    </div>
+                    <div class="gallery-caption">
+                        <div class="gallery-title">Complete Lawn Service</div>
+                        <div class="gallery-meta">Professional cut, edge, trim & cleanup • Swipe to see more</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <div class="gallery-badge">SPECIALTY</div>
+                        <div class="slider-container">
+                            <div class="slider-images" id="slider3">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%23fef3c7' width='800' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%23d97706'%3EPalm Before 1%3C/text%3E%3C/svg%3E" alt="Palm Before 1" class="slider-image">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%23fef3c7' width='800' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%23d97706'%3EPalm After 1%3C/text%3E%3C/svg%3E" alt="Palm After 1" class="slider-image">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%23fef3c7' width='800' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%23d97706'%3EPalm Before 2%3C/text%3E%3C/svg%3E" alt="Palm Before 2" class="slider-image">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%23fef3c7' width='800' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%23d97706'%3EPalm After 2%3C/text%3E%3C/svg%3E" alt="Palm After 2" class="slider-image">
+                            </div>
+                            <button class="slider-nav prev" onclick="moveSlide(3, -1)">‹</button>
+                            <button class="slider-nav next" onclick="moveSlide(3, 1)">›</button>
+                            <div class="slider-dots" id="dots3"></div>
+                            <div class="before-after-label" id="label3">BEFORE</div>
+                        </div>
+                    </div>
+                    <div class="gallery-caption">
+                        <div class="gallery-title">Palm Tree Removal</div>
+                        <div class="gallery-meta">Complete removal & haul away • Swipe to see more</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <div class="gallery-badge">SPECIALTY</div>
+                        <div class="slider-container">
+                            <div class="slider-images" id="slider4">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%23fed7aa' width='800' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%23c2410c'%3EForestry Before 1%3C/text%3E%3C/svg%3E" alt="Forestry Before 1" class="slider-image">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%23fed7aa' width='800' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%23c2410c'%3EForestry After 1%3C/text%3E%3C/svg%3E" alt="Forestry After 1" class="slider-image">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%23fed7aa' width='800' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%23c2410c'%3EForestry Before 2%3C/text%3E%3C/svg%3E" alt="Forestry Before 2" class="slider-image">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%23fed7aa' width='800' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%23c2410c'%3EForestry After 2%3C/text%3E%3C/svg%3E" alt="Forestry After 2" class="slider-image">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%23fed7aa' width='800' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%23c2410c'%3EForestry Before 3%3C/text%3E%3C/svg%3E" alt="Forestry Before 3" class="slider-image">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%23fed7aa' width='800' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%23c2410c'%3EForestry After 3%3C/text%3E%3C/svg%3E" alt="Forestry After 3" class="slider-image">
+                            </div>
+                            <button class="slider-nav prev" onclick="moveSlide(4, -1)">‹</button>
+                            <button class="slider-nav next" onclick="moveSlide(4, 1)">›</button>
+                            <div class="slider-dots" id="dots4"></div>
+                            <div class="before-after-label" id="label4">BEFORE</div>
+                        </div>
+                    </div>
+                    <div class="gallery-caption">
+                        <div class="gallery-title">Forestry & Land Clearing</div>
+                        <div class="gallery-meta">Heavy brush removal & property cleanup • Swipe to see more</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-section" id="contact-form">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Ready to Get Started?</h2>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.9); margin-bottom: 40px;">Fill out the form below and we'll get back to you with a free quote same day!</p>
+
+            <div class="contact-box">
+                <div class="contact-icon">📝</div>
+                <div class="contact-title">Get Your Free Quote</div>
+                
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="margin-top: 30px;">
+                    <div style="margin-bottom: 20px; text-align: left;">
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.95rem;">Name *</label>
+                        <input type="text" name="name" required style="width: 100%; padding: 14px 16px; border: 2px solid rgba(255,255,255,0.2); border-radius: 10px; font-size: 1rem; background: rgba(255,255,255,0.1); color: white; font-family: inherit;">
+                    </div>
+
+                    <div style="margin-bottom: 20px; text-align: left;">
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.95rem;">Phone Number *</label>
+                        <input type="tel" name="phone" required style="width: 100%; padding: 14px 16px; border: 2px solid rgba(255,255,255,0.2); border-radius: 10px; font-size: 1rem; background: rgba(255,255,255,0.1); color: white; font-family: inherit;">
+                    </div>
+
+                    <div style="margin-bottom: 20px; text-align: left;">
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.95rem;">What are you looking for? (Optional)</label>
+                        <textarea name="service" rows="3" style="width: 100%; padding: 14px 16px; border: 2px solid rgba(255,255,255,0.2); border-radius: 10px; font-size: 1rem; background: rgba(255,255,255,0.1); color: white; font-family: inherit; resize: vertical;" placeholder="Pressure washing, lawn care, tree removal, etc."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 10px;">
+                        ✅ Get My Free Quote
+                    </button>
+                </form>
+
+                <p class="contact-note" style="margin-top: 20px;">
+                    We usually respond within an hour during business hours.<br>
+                    <strong>Same-day service available!</strong>
+                </p>
+
+                <div style="margin-top: 30px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.2);">
+                    <p style="margin-bottom: 12px; font-size: 0.95rem; opacity: 0.9;">Prefer to text or call?</p>
+                    <a href="sms:+17703769981" style="color: #3b82f6; font-size: 1.3rem; font-weight: 700; text-decoration: none;">📱 770-376-9981</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <span>⚓</span>
+                <span>BLUE ANCHOR OUTDOORS</span>
+            </div>
+            <div class="footer-tagline">Young • Local • Ambitious</div>
+            <div class="footer-bottom">
+                <p>© 2025 Blue Anchor Outdoors.</p>
+                <p style="margin-top: 8px; font-size: 0.85rem;">Pressure Washing • Lawn Care • Outdoor Services</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Contact Button -->
+    <a href="#contact-form" class="floating-text" title="Get your free quote">
+        📝
+    </a>
+
+    <script>
+        // Image slider functionality
+        const sliders = {};
+
+        function initSlider(sliderId) {
+            const slider = document.getElementById('slider' + sliderId);
+            const dotsContainer = document.getElementById('dots' + sliderId);
+            const label = document.getElementById('label' + sliderId);
+            const images = slider.querySelectorAll('.slider-image');
+            const totalSlides = images.length;
+
+            sliders[sliderId] = {
+                currentIndex: 0,
+                totalSlides: totalSlides,
+                slider: slider,
+                label: label
+            };
+
+            // Create dots
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
+                dot.onclick = () => goToSlide(sliderId, i);
+                dotsContainer.appendChild(dot);
+            }
+        }
+
+        function moveSlide(sliderId, direction) {
+            const sliderData = sliders[sliderId];
+            sliderData.currentIndex += direction;
+
+            if (sliderData.currentIndex < 0) {
+                sliderData.currentIndex = sliderData.totalSlides - 1;
+            } else if (sliderData.currentIndex >= sliderData.totalSlides) {
+                sliderData.currentIndex = 0;
+            }
+
+            updateSlider(sliderId);
+        }
+
+        function goToSlide(sliderId, index) {
+            sliders[sliderId].currentIndex = index;
+            updateSlider(sliderId);
+        }
+
+        function updateSlider(sliderId) {
+            const sliderData = sliders[sliderId];
+            const offset = -sliderData.currentIndex * 100;
+            sliderData.slider.style.transform = `translateX(${offset}%)`;
+
+            // Update dots
+            const dots = document.querySelectorAll(`#dots${sliderId} .slider-dot`);
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === sliderData.currentIndex);
+            });
+
+            // Update label
+            sliderData.label.textContent = sliderData.currentIndex % 2 === 0 ? 'BEFORE' : 'AFTER';
+        }
+
+        // Initialize sliders on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            initSlider(1); // Pressure washing
+            initSlider(2); // Lawn service
+            initSlider(3); // Palm tree
+            initSlider(4); // Forestry
+        });
+
+        // Add touch/swipe support for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.querySelectorAll('.slider-container').forEach((container, index) => {
+            const sliderId = index + 1;
+            
+            container.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+
+            container.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe(sliderId);
+            });
+        });
+
+        function handleSwipe(sliderId) {
+            if (touchEndX < touchStartX - 50) {
+                moveSlide(sliderId, 1); // Swipe left
+            }
+            if (touchEndX > touchStartX + 50) {
+                moveSlide(sliderId, -1); // Swipe right
+            }
+        }
+    </script>
+
+</body>
+</html>
