@@ -21,18 +21,21 @@
             color: #0f172a;
             line-height: 1.6;
             background: #fff;
-            padding-top: 100px;
+            padding-top: 110px;
         }
 
-        /* Quick Jump Menu - Updated to be always visible */
+        /* Quick Jump Menu - Redesigned with glassmorphism */
         .quick-jump-menu {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(59, 130, 246, 0.3);
             z-index: 1000;
-            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
 
         .quick-jump-container {
@@ -42,10 +45,12 @@
         }
 
         .quick-jump-links {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 12px;
-            padding: 16px 20px;
+            display: flex;
+            gap: 8px;
+            padding: 10px 20px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .quick-jump-links.open {
@@ -53,29 +58,47 @@
         }
 
         .quick-jump-links a {
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.08);
             color: white;
-            padding: 12px 16px;
-            border-radius: 8px;
+            padding: 8px 16px;
+            border-radius: 10px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.95rem;
-            transition: all 0.3s;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
             text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
 
         .quick-jump-links a:hover {
-            background: rgba(255, 255, 255, 0.25);
+            background: rgba(59, 130, 246, 0.2);
+            border-color: rgba(59, 130, 246, 0.5);
             transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        .quick-jump-links a.primary-btn {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            border-color: rgba(59, 130, 246, 0.5);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        }
+
+        .quick-jump-links a.primary-btn:hover {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            box-shadow: 0 6px 16px rgba(59, 130, 246, 0.6);
         }
 
         /* Progress Bar */
         .progress-bar {
             position: fixed;
-            top: 70px;
+            top: 52px;
             left: 0;
             right: 0;
-            height: 4px;
+            height: 3px;
             background: rgba(59, 130, 246, 0.2);
             z-index: 998;
         }
@@ -90,7 +113,7 @@
         /* Header */
         .header {
             position: fixed;
-            top: 70px;
+            top: 52px;
             width: 100%;
             background: rgba(15, 23, 42, 0.95);
             backdrop-filter: blur(10px);
@@ -984,9 +1007,13 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            body { padding-top: 70px; }
-            .quick-jump-links { grid-template-columns: 1fr 1fr; }
-            .quick-jump-links a { font-size: 0.85rem; padding: 10px 12px; }
+            body { padding-top: 110px; }
+            .quick-jump-links { 
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 6px;
+            }
+            .quick-jump-links a { font-size: 0.75rem; padding: 8px 10px; }
             .hero-container { grid-template-columns: 1fr; gap: 40px; text-align: center; }
             .hero-content { text-align: center; }
             .hero h1 { font-size: 2.5rem; }
@@ -1015,16 +1042,17 @@
     </style>
 </head>
 <body>
-    <!-- Quick Jump Menu - Updated without toggle button -->
+    <!-- Quick Jump Menu - Redesigned with priority order -->
     <div class="quick-jump-menu" id="quickJumpMenu">
         <div class="quick-jump-container">
             <div class="quick-jump-links open" id="quickJumpLinks">
-                <a href="#instant-estimator">💡 Price Estimator</a>
-                <a href="#job-tracker">📍 Where We're Working</a>
-                <a href="#faq-section">💭 Questions?</a>
+                <a href="#contact-form" class="primary-btn">📝 Get Free Quote</a>
+                <a href="#our-work">🔍 See Our Work</a>
                 <a href="#discount-picker">🎁 Choose Your Bonus</a>
-                <a href="#contact-form">📝 Get Quote</a>
                 <a href="tel:+17703769981">📞 Call Now</a>
+                <a href="#instant-estimator">💡 Price Estimator</a>
+                <a href="#faq-section">💭 Questions?</a>
+                <a href="#job-tracker">📍 Where We're Working</a>
             </div>
         </div>
     </div>
@@ -1205,7 +1233,7 @@
     </section>
 
     <!-- Before/After Gallery -->
-    <section class="gallery-section">
+    <section class="gallery-section" id="our-work">
         <div class="container">
             <div class="section-header">
                 <div class="section-badge">✨ Our Work</div>
