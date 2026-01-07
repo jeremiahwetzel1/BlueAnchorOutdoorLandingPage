@@ -1571,20 +1571,17 @@
             pressure: {
                 question: 'What type of area?',
                 options: [
-                    { id: 'driveway', label: 'Driveway Only', price: [80, 150] },
-                    { id: 'house', label: 'House Exterior', price: [150, 300] },
-                    { id: 'combo', label: 'House + Driveway', price: [200, 400] },
-                    { id: 'full', label: 'Full Property', price: [300, 600] },
-                    { id: 'not-sure', label: 'Not Sure', price: [100, 350] }
+                    { id: 'any', label: 'Any Area', price: 'pricing-info', scrollToForm: true }
                 ],
-                note: 'We charge around $0.30/sq ft — most pros charge $0.35–$0.55'
+                note: 'We charge around $0.30/sq ft — most pros charge $0.35–$0.55',
+                customMessage: 'Fill out the form below for an exact free quote!'
             },
             lawn: {
-                question: 'What size lawn or lot?',
+                question: 'What size lawn?',
                 options: [
-                    { id: 'small', label: 'Small (Under 5,000 sq ft)', price: [30, 50] },
-                    { id: 'medium', label: 'Medium (5,000-10,000 sq ft)', price: [50, 80] },
-                    { id: 'large', label: 'Large (10,000+ sq ft)', price: [80, 150] },
+                    { id: 'small', label: 'Small Lawn', price: [30, 50] },
+                    { id: 'medium', label: 'Medium Lawn', price: [50, 80] },
+                    { id: 'large', label: 'Large Lawn', price: [80, 150] },
                     { id: 'not-sure', label: 'Not Sure', price: [40, 100] }
                 ],
                 note: 'This is just a ballpark. Your exact quote might be different based on specific details.'
@@ -1592,31 +1589,30 @@
             palm: {
                 question: 'How many trees?',
                 options: [
-                    { id: '1-2', label: '1-2 Trees', price: [100, 200] },
-                    { id: '3-5', label: '3-5 Trees', price: [250, 450] },
-                    { id: '6+', label: '6+ Trees', price: [500, 900] },
-                    { id: 'not-sure', label: 'Not Sure', price: [150, 500] }
+                    { id: '1-2', label: '1-2 Trees', price: [70, 120] },
+                    { id: '3-5', label: '3-5 Trees', price: [150, 300] },
+                    { id: '6+', label: '6+ Trees', price: '400+' },
+                    { id: 'not-sure', label: 'Not Sure', price: [100, 300] }
                 ],
                 note: 'Final price depends on tree height, location, and disposal needs.'
             },
             mulch: {
                 question: 'What do you need?',
                 options: [
-                    { id: 'refresh', label: 'Bed Refresh', price: [80, 150] },
-                    { id: 'flowers', label: 'Mulch + Flowers', price: [150, 300] },
-                    { id: 'redesign', label: 'Full Redesign', price: [300, 600] },
-                    { id: 'not-sure', label: 'Not Sure', price: [100, 350] }
+                    { id: 'any', label: 'Any Mulch/Landscape Work', price: 'custom', scrollToForm: true }
                 ],
-                note: 'Price varies based on bed size and materials chosen.'
+                note: 'Custom Quote — fill out the form for a fast estimate!',
+                customMessage: 'Every project is unique. Fill out the form below and we\'ll get you a quote fast!'
             },
             other: {
                 question: 'Tell us what you need',
                 options: [
-                    { id: 'describe', label: 'Just describe it – we\'ll help', price: null }
+                    { id: 'describe', label: 'Just describe it – we\'ll help', price: 'custom', scrollToForm: true }
                 ],
                 note: 'Every project is unique. Text or call us and we\'ll give you a custom quote!'
             }
         };
+
 
         function selectService(service) {
             selectedService = service;
