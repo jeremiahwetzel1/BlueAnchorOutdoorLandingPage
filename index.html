@@ -3,123 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blue Anchor Outdoors | Text for Same Day Quote | First-Time Bonus</title>
-    <meta name="description" content="Young, local brothers providing pressure washing, lawn care & outdoor services. Text us for same-day free quote + first-time bonus!">
+    <title>Blue Anchor Outdoors | Same-Day Lawn Care & Pressure Washing | Gulf Breeze</title>
+    <meta name="description" content="Two local brothers who actually show up. Pressure washing, lawn care, palm removal. Text for same-day quote. Gulf Breeze, Navarre, Pensacola.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
     <style>
-        #contact-form {
-            scroll-margin-top: 120px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
+        
+        :root {
+            --primary: #3b82f6;
+            --primary-dark: #2563eb;
+            --success: #10b981;
+            --dark: #0f172a;
+            --gray: #64748b;
+            --light-bg: #f8fafc;
+            --white: #ffffff;
+        }
+        
         html {
             scroll-behavior: smooth;
         }
         
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
         body {
-            font-family: 'Inter', sans-serif;
-            color: #0f172a;
+            font-family: 'Inter', -apple-system, system-ui, sans-serif;
+            color: var(--dark);
             line-height: 1.6;
-            background: #fff;
-            padding-top: 110px;
+            background: var(--white);
+            overflow-x: hidden;
         }
 
-        /* Quick Jump Menu - Redesigned with glassmorphism */
-        .quick-jump-menu {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(15, 23, 42, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(59, 130, 246, 0.3);
-            z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .quick-jump-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .quick-jump-links {
-            display: flex;
-            gap: 8px;
-            padding: 10px 20px;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .quick-jump-links.open {
-            max-height: none;
-        }
-
-        .quick-jump-links a {
-            background: rgba(255, 255, 255, 0.08);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.85rem;
-            transition: all 0.3s ease;
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .quick-jump-links a:hover {
-            background: rgba(59, 130, 246, 0.2);
-            border-color: rgba(59, 130, 246, 0.5);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
-        }
-
-        .quick-jump-links a.primary-btn {
-            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-            border-color: rgba(59, 130, 246, 0.5);
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
-        }
-
-        .quick-jump-links a.primary-btn:hover {
-            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-            box-shadow: 0 6px 16px rgba(59, 130, 246, 0.6);
-        }
-
-        /* Progress Bar */
-        .progress-bar {
-            position: fixed;
-            top: 52px;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: rgba(59, 130, 246, 0.2);
-            z-index: 998;
-        }
-
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(to right, #3b82f6, #10b981);
-            width: 0%;
-            transition: width 0.3s ease;
-        }
-
-        /* Header */
+        /* ===== HEADER (Simplified) ===== */
         .header {
             position: fixed;
-            top: 52px;
+            top: 0;
             width: 100%;
             background: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 2px solid #3b82f6;
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 2px solid var(--primary);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
             padding: 12px 20px;
-            z-index: 999;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -128,44 +64,72 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-size: 1.2rem;
-            font-weight: 800;
-            color: white;
+            gap: 12px;
+            color: var(--white);
+            font-size: 1.3rem;
+            font-weight: 900;
+            letter-spacing: -0.5px;
         }
 
         .logo-icon {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
         }
 
-        .header-text {
+        .header-ctas {
             display: flex;
+            gap: 12px;
             align-items: center;
-            gap: 8px;
-            color: white;
-            font-size: 0.95rem;
-            font-weight: 600;
         }
 
-        .header-text a {
-            color: #3b82f6;
-            text-decoration: none;
+        .header-btn {
+            padding: 10px 20px;
+            border-radius: 8px;
             font-weight: 700;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
         }
 
-        /* Hero Section */
+        .header-btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        }
+
+        .header-btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(59, 130, 246, 0.6);
+        }
+
+        .header-btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+
+        .header-btn-secondary:hover {
+            border-color: var(--primary);
+            background: rgba(59, 130, 246, 0.1);
+        }
+
+        /* ===== HERO (Cleaner, More Personality) ===== */
         .hero {
             min-height: 100vh;
-            background: url('https://storage.googleapis.com/msgsndr/bTvqGwhxsMeTGtI2UvsI/media/695832b9f0b9cffd7911bbd3.jpeg') no-repeat center center/cover;
-            color: white;
+            background: 
+                linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)),
+                url('https://storage.googleapis.com/msgsndr/bTvqGwhxsMeTGtI2UvsI/media/695832b9f0b9cffd7911bbd3.jpeg') center/cover no-repeat;
+            color: var(--white);
             display: flex;
             align-items: center;
-            justify-content: center;
-            padding: 100px 20px 200px;
+            padding: 120px 20px 80px;
             position: relative;
             overflow: hidden;
         }
 
+        /* Animated gradient overlay */
         .hero::before {
             content: '';
             position: absolute;
@@ -173,63 +137,110 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.15) 0%, transparent 50%);
+            background: radial-gradient(circle at 30% 50%, rgba(59, 130, 246, 0.2) 0%, transparent 50%);
+            animation: gradientShift 8s ease-in-out infinite;
             pointer-events: none;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { opacity: 0.3; transform: translateX(0); }
+            50% { opacity: 0.5; transform: translateX(20px); }
         }
 
         .hero-container {
             max-width: 1200px;
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
+            margin: 0 auto;
+            text-align: center;
             position: relative;
             z-index: 1;
         }
 
-        .hero-content {
-            text-align: left;
+        /* Trust badge */
+        .hero-badge {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.2);
+            border: 2px solid var(--success);
+            color: var(--success);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            animation: fadeInDown 0.8s ease-out;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
             font-weight: 900;
-            margin-bottom: 20px;
             line-height: 1.1;
             letter-spacing: -2px;
-            animation: fadeInUp 0.8s ease-out;
-        }
-
-        .hero-tagline {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 16px;
-            color: #3b82f6;
+            margin-bottom: 20px;
             animation: fadeInUp 1s ease-out;
         }
 
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, var(--primary), var(--success));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
         .hero-subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            margin-bottom: 40px;
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            opacity: 0.95;
+            margin-bottom: 16px;
+            font-weight: 600;
             animation: fadeInUp 1.2s ease-out;
         }
 
-        .cta-group {
+        .hero-proof {
             display: flex;
-            gap: 16px;
             justify-content: center;
+            gap: 32px;
+            margin: 32px 0 40px;
             flex-wrap: wrap;
             animation: fadeInUp 1.4s ease-out;
         }
 
+        .proof-item {
+            text-align: center;
+        }
+
+        .proof-number {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--success);
+            line-height: 1;
+        }
+
+        .proof-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 4px;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1.6s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         .btn {
-            padding: 18px 36px;
+            padding: 16px 32px;
             border-radius: 12px;
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             font-weight: 700;
             text-decoration: none;
             display: inline-flex;
@@ -238,46 +249,65 @@
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             cursor: pointer;
             border: none;
+            font-family: inherit;
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-            color: white;
-            box-shadow: 0 10px 40px rgba(59, 130, 246, 0.3);
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
         }
 
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 50px rgba(59, 130, 246, 0.5);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.6);
         }
 
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        .btn-secondary {
+            background: rgba(255,255,255,0.1);
+            border: 2px solid rgba(255,255,255,0.3);
+            color: var(--white);
+            backdrop-filter: blur(10px);
         }
 
-        /* Discount Banner - Updated cities */
-        .discount-banner {
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            color: white;
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.2);
+            border-color: rgba(255,255,255,0.5);
+        }
+
+        /* ===== SOCIAL PROOF BAR (New) ===== */
+        .social-proof-bar {
+            background: linear-gradient(135deg, var(--success), #059669);
+            color: var(--white);
             padding: 20px;
             text-align: center;
-            font-size: 1.1rem;
             font-weight: 700;
-            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
-            margin-top: 50px;
+            box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3);
         }
 
-        .discount-banner span {
-            font-size: 1.4rem;
+        .proof-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .proof-stat {
+            font-size: 1.1rem;
+        }
+
+        .proof-stat span {
+            font-size: 1.5rem;
             display: inline-block;
-            margin: 0 8px;
+            margin: 0 6px;
         }
 
-        /* Estimator Section */
-        .estimator-section {
+        /* ===== PRICE ESTIMATOR (COMPLETELY REDESIGNED - ONE SCREEN) ===== */
+        .pricing-section {
             padding: 80px 20px;
-            background: linear-gradient(to bottom, #f0f9ff, #fff);
+            background: linear-gradient(180deg, var(--white) 0%, var(--light-bg) 100%);
         }
 
         .container {
@@ -296,7 +326,7 @@
             color: #1e40af;
             padding: 8px 20px;
             border-radius: 20px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 700;
             margin-bottom: 16px;
             text-transform: uppercase;
@@ -304,270 +334,179 @@
         }
 
         .section-title {
-            font-size: 2.8rem;
+            font-size: clamp(2rem, 5vw, 3rem);
             font-weight: 900;
-            color: #0f172a;
+            color: var(--dark);
             margin-bottom: 16px;
             letter-spacing: -1px;
         }
 
         .section-subtitle {
-            font-size: 1.25rem;
-            color: #64748b;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .estimator-box {
+            font-size: 1.2rem;
+            color: var(--gray);
             max-width: 700px;
             margin: 0 auto;
-            background: white;
-            border: 3px solid #3b82f6;
-            border-radius: 24px;
-            padding: 48px;
-            box-shadow: 0 20px 60px rgba(59, 130, 246, 0.15);
         }
 
-        .estimator-step, .estimator-result {
-            text-align: center;
-        }
-
-        .estimator-question {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: #0f172a;
-            margin-bottom: 32px;
-        }
-
-        .estimator-options {
+        /* NEW: Single-screen pricing cards */
+        .pricing-grid {
             display: grid;
-            gap: 16px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 50px;
         }
 
-        .estimator-btn {
-            padding: 18px 24px;
-            background: white;
+        .price-card {
+            background: var(--white);
             border: 2px solid #e2e8f0;
-            border-radius: 12px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: #0f172a;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-family: inherit;
-        }
-
-        .estimator-btn:hover {
-            border-color: #3b82f6;
-            background: #f0f9ff;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.15);
-        }
-
-        .estimate-icon {
-            font-size: 4rem;
-            margin-bottom: 20px;
-        }
-
-        .estimate-title {
-            font-size: 1.6rem;
-            font-weight: 800;
-            color: #0f172a;
-            margin-bottom: 16px;
-        }
-
-        .estimate-price {
-            font-size: 3rem;
-            font-weight: 900;
-            color: #10b981;
-            margin: 20px 0;
-        }
-
-        .estimate-note {
-            color: #64748b;
-            font-size: 1rem;
-            margin-top: 16px;
-        }
-
-        .estimator-reset {
-            margin-top: 20px;
-            padding: 12px 24px;
-            background: transparent;
-            border: 2px solid #e2e8f0;
-            border-radius: 8px;
-            font-weight: 600;
-            color: #64748b;
-            cursor: pointer;
-            font-family: inherit;
-            transition: all 0.3s;
-        }
-
-        .estimator-reset:hover {
-            border-color: #3b82f6;
-            color: #3b82f6;
-        }
-
-        .hidden {
-            display: none !important;
-        }
-
-        /* Job Tracker Section - Updated */
-        .job-tracker-section {
-            padding: 60px 20px;
-            background: white;
-        }
-
-        .tracker-box {
-            max-width: 900px;
-            margin: 0 auto;
-            background: linear-gradient(135deg, #dbeafe, #bfdbfe);
             border-radius: 20px;
-            padding: 40px;
+            padding: 32px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
         }
 
-        .tracker-map {
-            background: white;
-            border-radius: 12px;
-            padding: 32px;
-            margin-top: 24px;
-            border: 2px solid #3b82f6;
+        .price-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--success));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s;
         }
 
-        .tracker-locations {
-            display: grid;
-            gap: 16px;
-            margin-top: 20px;
+        .price-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
         }
 
-        .tracker-item {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            padding: 16px;
-            background: #f0f9ff;
-            border-radius: 12px;
-            border-left: 4px solid #10b981;
+        .price-card:hover::before {
+            transform: scaleX(1);
         }
 
-        .tracker-icon {
-            font-size: 2rem;
+        .price-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
         }
 
-        .tracker-info {
-            flex: 1;
+        .price-service {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 12px;
         }
 
-        .tracker-location {
-            font-weight: 700;
-            color: #0f172a;
-            font-size: 1.1rem;
+        .price-range {
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--primary), var(--success));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 16px 0;
         }
 
-        .tracker-status {
-            color: #64748b;
+        .price-details {
+            color: var(--gray);
             font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 24px;
         }
 
-        .tracker-badge {
-            background: #10b981;
-            color: white;
+        .popular-badge {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
             padding: 6px 16px;
             border-radius: 20px;
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        /* Services Grid */
+        /* ===== SERVICES (Simpler) ===== */
         .services-section {
             padding: 80px 20px;
-            background: linear-gradient(to bottom, #f8fafc, #fff);
+            background: var(--white);
         }
 
         .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background: var(--light-bg);
+            border: 2px solid transparent;
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.4s;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            background: var(--white);
+        }
+
+        .service-icon {
+            font-size: 4rem;
+            margin-bottom: 24px;
+            display: block;
+        }
+
+        .service-title {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 16px;
+        }
+
+        .service-desc {
+            color: var(--gray);
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        /* ===== GALLERY (Keep but cleaner) ===== */
+        .gallery-section {
+            padding: 80px 20px;
+            background: var(--light-bg);
+        }
+
+        .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 28px;
             margin-top: 50px;
         }
 
-        .service-card {
-            background: white;
-            border: 2px solid #e2e8f0;
-            border-radius: 20px;
-            padding: 36px;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
-            background: linear-gradient(to right, #3b82f6, #10b981);
-            transform: scaleX(0);
-            transition: transform 0.4s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 50px rgba(59, 130, 246, 0.15);
-            border-color: #3b82f6;
-        }
-
-        .service-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-
-        .service-title {
-            font-size: 1.4rem;
-            font-weight: 800;
-            color: #0f172a;
-            margin-bottom: 12px;
-        }
-
-        .service-desc {
-            color: #64748b;
-            line-height: 1.7;
-            font-size: 1rem;
-        }
-
-        /* Before/After Gallery */
-        .gallery-section {
-            padding: 80px 20px;
-            background: white;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 28px;
-            margin-top: 50px;
-        }
-
         .gallery-item {
-            background: #f8fafc;
+            background: var(--white);
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.4s;
             border: 2px solid #e2e8f0;
         }
 
         .gallery-item:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
-            border-color: #3b82f6;
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.12);
+            border-color: var(--primary);
         }
 
         .gallery-image {
@@ -585,7 +524,7 @@
 
         .slider-images {
             display: flex;
-            transition: transform 0.4s ease-in-out;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             height: 100%;
         }
 
@@ -599,36 +538,33 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(4px);
+            color: var(--white);
             border: none;
-            width: 40px;
-            height: 40px;
+            width: 44px;
+            height: 44px;
             border-radius: 50%;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
             z-index: 10;
-            transition: background 0.3s;
+            transition: all 0.3s;
         }
 
         .slider-nav:hover {
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0,0,0,0.85);
+            transform: translateY(-50%) scale(1.1);
         }
 
-        .slider-nav.prev {
-            left: 10px;
-        }
-
-        .slider-nav.next {
-            right: 10px;
-        }
+        .slider-nav.prev { left: 12px; }
+        .slider-nav.next { right: 12px; }
 
         .slider-dots {
             position: absolute;
-            bottom: 12px;
+            bottom: 16px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
@@ -640,63 +576,68 @@
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.5);
+            background: rgba(255,255,255,0.5);
             cursor: pointer;
             transition: all 0.3s;
         }
 
         .slider-dot.active {
-            background: white;
-            width: 24px;
+            background: var(--white);
+            width: 28px;
             border-radius: 4px;
         }
 
         .before-after-label {
             position: absolute;
-            bottom: 50px;
+            bottom: 60px;
             left: 50%;
             transform: translateX(-50%);
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 8px 20px;
+            background: rgba(0,0,0,0.75);
+            backdrop-filter: blur(4px);
+            color: var(--white);
+            padding: 8px 24px;
             border-radius: 20px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 700;
             z-index: 10;
+            letter-spacing: 1px;
         }
 
         .gallery-badge {
             position: absolute;
             top: 16px;
             right: 16px;
-            background: linear-gradient(135deg, #10b981, #059669);
-            color: white;
+            background: linear-gradient(135deg, var(--success), #059669);
+            color: var(--white);
             padding: 6px 16px;
             border-radius: 20px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 700;
+            z-index: 10;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .gallery-caption {
-            padding: 24px;
+            padding: 28px;
         }
 
         .gallery-title {
-            font-weight: 700;
-            font-size: 1.2rem;
-            margin-bottom: 8px;
-            color: #0f172a;
+            font-weight: 800;
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: var(--dark);
         }
 
         .gallery-meta {
             font-size: 0.95rem;
-            color: #64748b;
+            color: var(--gray);
         }
 
-        /* FAQ Section - Updated without insurance question */
+        /* ===== FAQ (Keep but styled better) ===== */
         .faq-section {
             padding: 80px 20px;
-            background: #f8fafc;
+            background: var(--white);
         }
 
         .faq-container {
@@ -707,7 +648,7 @@
         }
 
         .faq-item {
-            background: white;
+            background: var(--white);
             border: 2px solid #e2e8f0;
             border-radius: 16px;
             overflow: hidden;
@@ -716,7 +657,7 @@
         }
 
         .faq-item:hover {
-            border-color: #3b82f6;
+            border-color: var(--primary);
             box-shadow: 0 8px 25px rgba(59, 130, 246, 0.1);
         }
 
@@ -727,13 +668,13 @@
             align-items: center;
             font-weight: 700;
             font-size: 1.1rem;
-            color: #0f172a;
+            color: var(--dark);
         }
 
         .faq-arrow {
             font-size: 1rem;
             transition: transform 0.3s;
-            color: #3b82f6;
+            color: var(--primary);
         }
 
         .faq-item.active .faq-arrow {
@@ -743,10 +684,10 @@
         .faq-answer {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+            transition: all 0.3s ease-out;
             padding: 0 28px;
-            color: #64748b;
-            line-height: 1.7;
+            color: var(--gray);
+            line-height: 1.8;
             font-size: 1rem;
         }
 
@@ -755,121 +696,152 @@
             padding: 0 28px 24px;
         }
 
-        /* Discount Picker - Updated offers */
-        .discount-picker-section {
-            padding: 60px 20px;
-            background: linear-gradient(135deg, #f0f9ff, #dbeafe);
-        }
-
-        .discount-options {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-            max-width: 1000px;
-            margin: 40px auto 0;
-        }
-
-        .discount-card {
-            background: white;
-            border: 3px solid #e2e8f0;
-            border-radius: 20px;
-            padding: 36px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.4s;
-            position: relative;
-        }
-
-        .discount-card:hover {
-            transform: translateY(-8px);
-            border-color: #3b82f6;
-            box-shadow: 0 20px 50px rgba(59, 130, 246, 0.2);
-        }
-
-        .discount-card.selected {
-            border-color: #10b981;
-            background: linear-gradient(135deg, #f0fdf4, #dcfce7);
-            box-shadow: 0 15px 40px rgba(16, 185, 129, 0.3);
-        }
-
-        .discount-icon {
-            font-size: 3.5rem;
-            margin-bottom: 16px;
-        }
-
-        .discount-title {
-            font-size: 1.3rem;
-            font-weight: 800;
-            color: #0f172a;
-            margin-bottom: 12px;
-        }
-
-        .discount-desc {
-            color: #64748b;
-            line-height: 1.6;
-            font-size: 0.95rem;
-        }
-
-        .popular-badge {
-            position: absolute;
-            top: -12px;
-            right: 20px;
-            background: linear-gradient(135deg, #3b82f6, #2563eb);
-            color: white;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-
-        /* Contact Section */
+        /* ===== CONTACT SECTION (Simplified) ===== */
         .contact-section {
             padding: 80px 20px;
-            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
-            color: white;
-            text-align: center;
+            background: linear-gradient(135deg, var(--dark) 0%, #1e3a5f 100%);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
         }
 
-        .contact-box {
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 70% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .contact-container {
             max-width: 600px;
-            margin: 40px auto 0;
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255, 255, 255, 0.15);
-            border-radius: 24px;
-            padding: 48px;
-        }
-
-        .contact-icon {
-            font-size: 4rem;
-            margin-bottom: 24px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
         }
 
         .contact-title {
-            font-size: 1.8rem;
-            font-weight: 800;
+            font-size: clamp(2rem, 5vw, 2.5rem);
+            font-weight: 900;
             margin-bottom: 16px;
         }
 
-        .contact-note {
-            font-size: 1rem;
+        .contact-subtitle {
+            font-size: 1.2rem;
             opacity: 0.9;
-            margin-top: 16px;
+            margin-bottom: 40px;
         }
 
-        /* Footer */
+        .contact-form {
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(12px);
+            border: 2px solid rgba(255,255,255,0.15);
+            border-radius: 24px;
+            padding: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+            text-align: left;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 12px;
+            font-size: 1rem;
+            background: rgba(255,255,255,0.1);
+            color: var(--white);
+            font-family: inherit;
+            transition: all 0.3s;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: rgba(255,255,255,0.15);
+        }
+
+        .form-input::placeholder,
+        .form-textarea::placeholder {
+            color: rgba(255,255,255,0.5);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 18px;
+            font-size: 1.15rem;
+            margin-top: 8px;
+        }
+
+        .contact-alt {
+            margin-top: 32px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .contact-alt p {
+            margin-bottom: 16px;
+            opacity: 0.9;
+        }
+
+        .contact-methods {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-method-btn {
+            background: rgba(255,255,255,0.1);
+            border: 2px solid rgba(255,255,255,0.2);
+            color: var(--white);
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+
+        .contact-method-btn:hover {
+            background: rgba(255,255,255,0.2);
+            border-color: rgba(255,255,255,0.4);
+            transform: translateY(-2px);
+        }
+
+        /* ===== FOOTER ===== */
         .footer {
-            background: #0f172a;
-            color: white;
+            background: var(--dark);
+            color: var(--white);
             padding: 40px 20px 30px;
             text-align: center;
         }
 
         .footer-logo {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             font-weight: 900;
-            color: white;
             margin-bottom: 12px;
             display: flex;
             align-items: center;
@@ -878,26 +850,25 @@
         }
 
         .footer-tagline {
-            color: #3b82f6;
+            color: var(--primary);
             font-weight: 600;
             margin-bottom: 24px;
-            font-size: 1rem;
         }
 
         .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255,255,255,0.1);
             padding-top: 20px;
-            color: #64748b;
+            color: var(--gray);
             font-size: 0.9rem;
         }
 
-        /* Floating Text Button (Mobile) */
-        .floating-text {
+        /* ===== FLOATING CTA ===== */
+        .floating-cta {
             position: fixed;
             bottom: 24px;
             right: 24px;
-            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-            color: white;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
             width: 64px;
             height: 64px;
             border-radius: 50%;
@@ -908,340 +879,296 @@
             box-shadow: 0 10px 30px rgba(59, 130, 246, 0.5);
             z-index: 999;
             text-decoration: none;
-            animation: pulse 2s infinite;
-            transition: transform 0.3s;
+            transition: all 0.3s;
+            animation: pulse 2.5s infinite;
         }
 
-        .floating-text:hover {
+        .floating-cta:hover {
             transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.7);
         }
 
         @keyframes pulse {
-            0%, 100% { box-shadow: 0 10px 30px rgba(59, 130, 246, 0.5); transform: scale(1); }
-            50% { box-shadow: 0 15px 40px rgba(59, 130, 246, 0.7); transform: scale(1.05); }
-        }
-
-        /* Exit Popup */
-        .exit-popup {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.85);
-            backdrop-filter: blur(8px);
-            display: none;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-            padding: 20px;
-        }
-
-        .exit-popup.show {
-            display: flex;
-        }
-
-        .exit-popup-content {
-            background: white;
-            border-radius: 24px;
-            padding: 48px;
-            max-width: 500px;
-            width: 100%;
-            text-align: center;
-            position: relative;
-            animation: popupSlideIn 0.4s ease-out;
-        }
-
-        @keyframes popupSlideIn {
-            from { opacity: 0; transform: translateY(-30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .exit-popup-close {
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            background: transparent;
-            border: none;
-            font-size: 1.8rem;
-            color: #64748b;
-            cursor: pointer;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            transition: all 0.3s;
-        }
-
-        .exit-popup-close:hover {
-            background: #f1f5f9;
-            color: #0f172a;
-        }
-
-        .exit-popup-icon {
-            font-size: 4rem;
-            margin-bottom: 20px;
-        }
-
-        .exit-popup h3 {
-            font-size: 2rem;
-            font-weight: 900;
-            color: #0f172a;
-            margin-bottom: 16px;
-        }
-
-        .exit-popup p {
-            font-size: 1.1rem;
-            color: #64748b;
-            margin-bottom: 32px;
-            line-height: 1.6;
-        }
-
-        .exit-popup .btn {
-            width: 100%;
-            justify-content: center;
-            font-size: 1.15rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            body { padding-top: 110px; }
-            .quick-jump-links { 
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 6px;
+            0%, 100% { 
+                box-shadow: 0 10px 30px rgba(59, 130, 246, 0.5);
+                transform: scale(1);
             }
-            .quick-jump-links a { font-size: 0.75rem; padding: 8px 10px; }
-            .hero-container { grid-template-columns: 1fr; gap: 40px; text-align: center; }
-            .hero-content { text-align: center; }
-            .hero h1 { font-size: 2.5rem; }
-            .hero-tagline { font-size: 1.4rem; }
-            .hero-subtitle { font-size: 1.1rem; }
-            .section-title { font-size: 2rem; }
-            .cta-group { flex-direction: column; align-items: center; }
-            .btn { width: 90%; max-width: 320px; justify-content: center; }
-            .header { padding: 10px 15px; }
-            .logo { font-size: 1rem; }
-            .header-text { font-size: 0.75rem; }
-            .service-card { padding: 28px; }
-            .contact-box { padding: 32px 24px; }
-            .estimator-box { padding: 32px 24px; }
-            .discount-options { grid-template-columns: 1fr; }
-            .tracker-locations { grid-template-columns: 1fr; }
+            50% { 
+                box-shadow: 0 15px 40px rgba(59, 130, 246, 0.7);
+                transform: scale(1.05);
+            }
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .header-btn-secondary {
+                display: none;
+            }
+            
+            .hero {
+                padding: 100px 20px 60px;
+            }
+            
+            .hero-proof {
+                gap: 20px;
+            }
+            
+            .proof-number {
+                font-size: 1.8rem;
+            }
+            
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-form {
+                padding: 32px 24px;
+            }
+            
+            .hero-ctas {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
         }
 
         @media (max-width: 480px) {
-            .discount-banner { font-size: 0.95rem; }
-            .discount-banner span { font-size: 1.2rem; }
-            .gallery-grid { grid-template-columns: 1fr; }
-            .services-grid { grid-template-columns: 1fr; }
-            .estimator-question { font-size: 1.4rem; }
+            .header-container {
+                padding: 10px 15px;
+            }
+            
+            .logo {
+                font-size: 1.1rem;
+            }
+            
+            .header-btn {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+            }
+            
+            .proof-stats {
+                gap: 20px;
+            }
+            
+            .proof-stat {
+                font-size: 0.95rem;
+            }
+        }
+
+        /* ===== UTILITY CLASSES ===== */
+        .hidden {
+            display: none !important;
         }
     </style>
 </head>
 <body>
-    <!-- Quick Jump Menu - Redesigned with priority order -->
-    <div class="quick-jump-menu" id="quickJumpMenu">
-        <div class="quick-jump-container">
-            <div class="quick-jump-links open" id="quickJumpLinks">
-                <a href="#contact-form" class="primary-btn">📝 Get Free Quote</a>
-                <a href="#our-work">🔍 See Our Work</a>
-                <a href="#discount-picker">🎁 Choose Your Bonus</a>
-                <a href="tel:+17703769981">📞 Call Now</a>
-                <a href="#instant-estimator">💡 Price Estimator</a>
-                <a href="#faq-section">💭 Questions?</a>
-                <a href="#job-tracker">📍 Where We're Working</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Progress Bar -->
-    <div class="progress-bar">
-        <div class="progress-fill" id="progressFill"></div>
-    </div>
-
     <!-- Header -->
     <header class="header">
-        <div class="logo">
-            <span class="logo-icon">⚓</span>
-            <div>
-                <div>BLUE ANCHOR</div>
-                <div style="font-size: 0.65rem; font-weight: 600; color: #3b82f6;">OUTDOORS</div>
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-icon">⚓</span>
+                <div>
+                    <div>BLUE ANCHOR</div>
+                    <div style="font-size: 0.65rem; font-weight: 600; color: var(--primary);">OUTDOORS</div>
+                </div>
             </div>
-        </div>
-        <div class="header-text">
-            Text us: <a href="sms:+17703769981">770-376-9981</a>
+            <div class="header-ctas">
+                <a href="tel:+17703769981" class="header-btn header-btn-secondary">📞 Call</a>
+                <a href="#contact" class="header-btn header-btn-primary">Get Quote</a>
+            </div>
         </div>
     </header>
 
     <!-- Hero -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>BLUE ANCHOR OUTDOORS</h1>
-            <p class="hero-tagline">Young • Local • Ambitious</p>
-            <p class="hero-subtitle">Pressure Washing • Lawn Care • Outdoor Services</p>
-            <div class="cta-group">
-                <a href="#contact-form" class="btn btn-primary">
-                    📝 Get Your Free Quote
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-badge">⭐ 4.9 Stars • 70+ Happy Customers</div>
+            <h1>
+                Two Brothers Who<br>
+                <span class="highlight">Actually Show Up</span>
+            </h1>
+            <p class="hero-subtitle">
+                Same-day lawn care & pressure washing in Gulf Breeze, Navarre & Pensacola
+            </p>
+            
+            <div class="hero-proof">
+                <div class="proof-item">
+                    <div class="proof-number">100+</div>
+                    <div class="proof-label">Yards Transformed</div>
+                </div>
+                <div class="proof-item">
+                    <div class="proof-number">Same Day</div>
+                    <div class="proof-label">Service Available</div>
+                </div>
+                <div class="proof-item">
+                    <div class="proof-number">$0</div>
+                    <div class="proof-label">Upfront Payment</div>
+                </div>
+            </div>
+
+            <div class="hero-ctas">
+                <a href="sms:+17703769981?body=Hi! I'd like to get a free quote for my property." class="btn btn-primary">
+                    📱 Text for Same-Day Quote
+                </a>
+                <a href="#pricing" class="btn btn-secondary">
+                    💰 See Pricing
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Discount Banner - Updated cities -->
-    <section class="discount-banner">
-        ⭐⭐⭐⭐⭐ <span>4.9 Stars</span> • 70+ Happy Clients • 100+ Yards Transformed<br>
-        <small style="font-size: 0.95rem; opacity: 0.95;">Trusted by families in Gulf Breeze, Navarre, Pensacola & beyond</small>
-    </section>
-
-    <!-- Top Header CTA for Large Projects -->
-    <section style="padding: 20px; text-align: center; background: #f8fafc;">
-        <p class="section-subtitle" style="margin-top: 16px; font-weight: 600;">
-            🛠️ Planning a large project or install? <a href="#contact-form" style="color: #3b82f6; font-weight: bold;">Start with our full quote form here</a>
-        </p>
-    </section>
-
-    <!-- Instant Price Estimator - Updated -->
-    <section class="estimator-section" id="instant-estimator">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">💡 See Your Cost First</div>
-                <h2 class="section-title">Get Your Instant Estimate</h2>
-                <p class="section-subtitle">No contact info needed yet — just see what it might cost in 20 seconds</p>
-            </div>
-
-            <div class="estimator-box">
-                <div class="estimator-step" id="step1">
-                    <h3 class="estimator-question">What do you need?</h3>
-                    <div class="estimator-options">
-                        <button class="estimator-btn" onclick="selectService('pressure')">💧 Pressure Washing</button>
-                        <button class="estimator-btn" onclick="selectService('lawn')">🌱 Lawn Care</button>
-                        <button class="estimator-btn" onclick="selectService('palm')">🌴 Palm Removal</button>
-                        <button class="estimator-btn" onclick="selectService('mulch')">🌿 Mulch/Landscaping</button>
-                        <button class="estimator-btn" onclick="selectService('other')">🔧 Other Service</button>
-                    </div>
-                </div>
-
-                <div class="estimator-step hidden" id="step2">
-                    <h3 class="estimator-question" id="step2Question">How big is the area?</h3>
-                    <div class="estimator-options" id="step2Options">
-                        <!-- Dynamic buttons populated by JS -->
-                    </div>
-                </div>
-
-                <div class="estimator-result hidden" id="result">
-                    <div class="estimate-icon">💰</div>
-                    <h3 class="estimate-title">Your Estimated Cost</h3>
-                    <div class="estimate-price" id="estimatePrice">$80 - $150</div>
-                    <p class="estimate-note" id="estimateNote">This is just a ballpark. Your exact quote might be different based on specific details.</p>
-                    <a href="#discount-picker" class="btn btn-primary" style="margin-top: 20px;">
-                        🎁 Get Exact Quote + Choose Your Bonus
-                    </a>
-                    <button class="estimator-reset" onclick="resetEstimator()">← Start Over</button>
-                </div>
-            </div>
+    <!-- Social Proof Bar -->
+    <div class="social-proof-bar">
+        <div class="proof-stats">
+            <div class="proof-stat">⭐⭐⭐⭐⭐ <span>4.9 Stars</span></div>
+            <div class="proof-stat">🏡 <span>70+</span> Happy Clients</div>
+            <div class="proof-stat">🌱 <span>100+</span> Yards Done</div>
         </div>
-    </section>
+    </div>
 
-    <!-- Job Tracker - Updated -->
-    <section class="job-tracker-section" id="job-tracker">
+    <!-- Pricing (NEW - Single Screen) -->
+    <section class="pricing-section" id="pricing">
         <div class="container">
             <div class="section-header">
-                <div class="section-badge">📍 We're Active Today</div>
-                <h2 class="section-title">Where We're Working Right Now</h2>
-                <p class="section-subtitle">Real jobs from this week in your area</p>
+                <div class="section-badge">💰 Simple Pricing</div>
+                <h2 class="section-title">What It Actually Costs</h2>
+                <p class="section-subtitle">No hidden fees. No BS. Just honest pricing. Text us for exact quote.</p>
             </div>
 
-            <div class="tracker-box">
-                <div class="tracker-map">
-                    <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 8px; color: #0f172a;">📆 Weekly Schedule:</h3>
-                    <p style="color: #64748b; margin-bottom: 20px;">
-                        - ✅ Mon: Navarre – Lawn Care<br>
-                        - ✅ Tue: Gulf Breeze – Pressure Wash<br>
-                        - ✅ Wed: Pensacola – Mulch Install
-                    </p>
-                    
-                    <div class="tracker-locations">
-                        <div class="tracker-item">
-                            <div class="tracker-icon">🚿</div>
-                            <div class="tracker-info">
-                                <div class="tracker-location">Gulf Breeze</div>
-                                <div class="tracker-status">Pressure washing driveway • Started 9:00 AM</div>
-                            </div>
-                            <div class="tracker-badge">IN PROGRESS</div>
-                        </div>
-
-                        <div class="tracker-item">
-                            <div class="tracker-icon">🌱</div>
-                            <div class="tracker-info">
-                                <div class="tracker-location">Navarre</div>
-                                <div class="tracker-status">Lawn service scheduled • 1:00 PM</div>
-                            </div>
-                            <div class="tracker-badge" style="background: #3b82f6;">UP NEXT</div>
-                        </div>
-
-                        <div class="tracker-item">
-                            <div class="tracker-icon">🌴</div>
-                            <div class="tracker-info">
-                                <div class="tracker-location">Pensacola</div>
-                                <div class="tracker-status">Palm tree removal • 3:30 PM</div>
-                            </div>
-                            <div class="tracker-badge" style="background: #64748b;">SCHEDULED</div>
-                        </div>
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="price-icon">💧</div>
+                    <div class="price-service">Pressure Washing</div>
+                    <div class="price-range">~$0.30/sq ft</div>
+                    <div class="price-details">
+                        Driveway, patio, house exterior<br>
+                        <strong>Way cheaper than competitors</strong><br>
+                        <small>(Most charge $0.35-$0.55/sq ft)</small>
                     </div>
-
-                    <p style="margin-top: 24px; text-align: center; font-weight: 600; color: #10b981;">
-                        ✅ Same-day service still available! Text us now.
-                    </p>
-                    <p style="font-size: 0.95rem; color: #64748b; text-align: center; margin-top: 12px;">We update this weekly — stay tuned</p>
+                    <a href="sms:+17703769981?body=I need pressure washing. Can you quote me?" class="btn btn-primary" style="width: 100%; justify-content: center; font-size: 0.95rem;">Get Quote</a>
                 </div>
+
+                <div class="price-card">
+                    <div class="price-icon">🌱</div>
+                    <div class="price-service">Lawn Care</div>
+                    <div class="price-range">$30-$150</div>
+                    <div class="price-details">
+                        Mow, edge, trim, blow<br>
+                        Small yards: $30-50<br>
+                        Medium: $50-80<br>
+                        Large: $80-150
+                    </div>
+                    <a href="sms:+17703769981?body=I need lawn service. Can you quote me?" class="btn btn-primary" style="width: 100%; justify-content: center; font-size: 0.95rem;">Get Quote</a>
+                </div>
+
+                <div class="price-card">
+                    <div class="price-icon">🌴</div>
+                    <div class="price-service">Palm Removal</div>
+                    <div class="price-range">$70-$300+</div>
+                    <div class="price-details">
+                        1-2 trees: $70-120<br>
+                        3-5 trees: $150-300<br>
+                        6+ trees: $400+<br>
+                        <small>Price varies by height</small>
+                    </div>
+                    <a href="sms:+17703769981?body=I need palm tree removal. Can you quote me?" class="btn btn-primary" style="width: 100%; justify-content: center; font-size: 0.95rem;">Get Quote</a>
+                </div>
+
+                <div class="price-card">
+                    <div class="price-icon">🌿</div>
+                    <div class="price-service">Mulch & Landscaping</div>
+                    <div class="price-range">Custom</div>
+                    <div class="price-details">
+                        Mulch install, bed refresh,<br>
+                        plant removal, cleanup<br>
+                        <strong>Every job is different</strong><br>
+                        <small>Text us what you need</small>
+                    </div>
+                    <a href="sms:+17703769981?body=I need landscaping work. Can you quote me?" class="btn btn-primary" style="width: 100%; justify-content: center; font-size: 0.95rem;">Get Quote</a>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 48px;">
+                <p style="font-size: 1.1rem; color: var(--gray); margin-bottom: 16px;">
+                    <strong>🎁 First-Time Bonus:</strong> Free edge/trim add-on with any service
+                </p>
+                <a href="#contact" class="btn btn-primary">
+                    Get Your Free Quote Now
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Services -->
-    <section class="services-section">
+    <section class="services-section" id="services">
         <div class="container">
             <div class="section-header">
                 <div class="section-badge">🌟 What We Do</div>
-                <h2 class="section-title">Everything Your Property Needs</h2>
-                <p class="section-subtitle">We're two brothers who take pride in every job, big or small.<br><strong style="color: #10b981;">We treat every yard like it's our grandma's. No shortcuts, no BS.</strong></p>
+                <h2 class="section-title">We Do It All</h2>
+                <p class="section-subtitle">
+                    Two brothers who treat every yard like it's our grandma's<br>
+                    <strong>No shortcuts. No BS. Just good work.</strong>
+                </p>
             </div>
 
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">💧</div>
+                    <span class="service-icon">💧</span>
                     <h3 class="service-title">Pressure Washing</h3>
-                    <p class="service-desc"><strong>Driveways • Patios • Houses</strong><br>We blast away years of dirt and grime. Your surfaces will look brand new.</p>
+                    <p class="service-desc">
+                        <strong>Driveways • Patios • Houses</strong><br>
+                        We blast away years of grime. Your surfaces look brand new.
+                    </p>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon">🌱</div>
+                    <span class="service-icon">🌱</span>
                     <h3 class="service-title">Lawn Care</h3>
-                    <p class="service-desc"><strong>Cut • Edge • Weedeat • Blow</strong><br>Weekly maintenance or one-time cuts. We keep your lawn looking sharp.</p>
+                    <p class="service-desc">
+                        <strong>Cut • Edge • Weedeat • Blow</strong><br>
+                        Weekly maintenance or one-time cuts. We keep your lawn sharp.
+                    </p>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon">🌿</div>
+                    <span class="service-icon">🌿</span>
                     <h3 class="service-title">Outdoor Services</h3>
-                    <p class="service-desc"><strong>Removals • Trimming • Installs</strong><br>Palm trees, shrubs, mulch, cleanup—if it's outside, we handle it.</p>
+                    <p class="service-desc">
+                        <strong>Removals • Trimming • Installs</strong><br>
+                        Palm trees, shrubs, mulch, cleanup—we handle it.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Before/After Gallery -->
-    <section class="gallery-section" id="our-work">
+    <!-- Gallery (Keep your existing images - I'll copy the structure) -->
+    <section class="gallery-section" id="gallery">
         <div class="container">
             <div class="section-header">
                 <div class="section-badge">✨ Our Work</div>
                 <h2 class="section-title">See What We Can Do</h2>
-                <p class="section-subtitle">Real jobs from real customers. No stock photos, just our work.<br><small style="color: #3b82f6; font-weight: 600;">Need something else? We handle it all—landscaping, installs, cleanups & more.</small></p>
+                <p class="section-subtitle">
+                    Real jobs from real customers. No stock photos.<br>
+                    <strong>Need something else? We handle it all.</strong>
+                </p>
             </div>
 
             <div class="gallery-grid">
+                <!-- Gallery Item 1 -->
                 <div class="gallery-item">
                     <div class="gallery-image">
                         <div class="gallery-badge">BEFORE/AFTER</div>
@@ -1261,11 +1188,12 @@
                         </div>
                     </div>
                     <div class="gallery-caption">
-                        <div class="gallery-title">House & Driveway Pressure Wash</div>
-                        <div class="gallery-meta">Removed 5+ years of buildup • Swipe to see transformations</div>
+                        <div class="gallery-title">House & Driveway Wash</div>
+                        <div class="gallery-meta">Removed 5+ years of buildup • Swipe to see more</div>
                     </div>
                 </div>
 
+                <!-- Gallery Item 2 -->
                 <div class="gallery-item">
                     <div class="gallery-image">
                         <div class="gallery-badge">BEFORE/AFTER</div>
@@ -1286,10 +1214,11 @@
                     </div>
                     <div class="gallery-caption">
                         <div class="gallery-title">Complete Lawn Service</div>
-                        <div class="gallery-meta">Professional cut, edge, trim & cleanup • Swipe to see more</div>
+                        <div class="gallery-meta">Professional cut, edge, trim & cleanup</div>
                     </div>
                 </div>
 
+                <!-- Gallery Item 3 -->
                 <div class="gallery-item">
                     <div class="gallery-image">
                         <div class="gallery-badge">SPECIALTY</div>
@@ -1308,10 +1237,11 @@
                     </div>
                     <div class="gallery-caption">
                         <div class="gallery-title">Palm Tree Removal</div>
-                        <div class="gallery-meta">Complete removal & haul away • Swipe to see more</div>
+                        <div class="gallery-meta">Complete removal & haul away</div>
                     </div>
                 </div>
 
+                <!-- Gallery Item 4 -->
                 <div class="gallery-item">
                     <div class="gallery-image">
                         <div class="gallery-badge">SPECIALTY</div>
@@ -1331,12 +1261,13 @@
                         </div>
                     </div>
                     <div class="gallery-caption">
-                        <div class="gallery-title">Forestry & Land Clearing</div>
-                        <div class="gallery-meta">Heavy brush removal & property cleanup • Swipe to see more</div>
+                        <div class="gallery-title">Land Clearing</div>
+                        <div class="gallery-meta">Heavy brush removal & property cleanup</div>
                     </div>
                 </div>
                 
-                 <div class="gallery-item">
+                 <!-- Gallery Item 5 -->
+                <div class="gallery-item">
                     <div class="gallery-image">
                         <div class="gallery-badge">MULCH</div>
                         <div class="slider-container">
@@ -1353,31 +1284,31 @@
                         </div>
                     </div>
                     <div class="gallery-caption">
-                        <div class="gallery-title">Mulch, Beds & Curb Appeal</div>
-                        <div class="gallery-meta">Refreshed mulch and added texture • Swipe to see more</div>
+                        <div class="gallery-title">Mulch & Curb Appeal</div>
+                        <div class="gallery-meta">Refreshed mulch and added texture</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section - Updated without insurance -->
-    <section class="faq-section" id="faq-section">
+    <!-- FAQ -->
+    <section class="faq-section" id="faq">
         <div class="container">
             <div class="section-header">
-                <div class="section-badge">💭 You Might Be Wondering...</div>
-                <h2 class="section-title">Questions We Get All the Time</h2>
-                <p class="section-subtitle">Tap any question to see the answer (or just text us!)</p>
+                <div class="section-badge">💭 Questions</div>
+                <h2 class="section-title">You're Probably Wondering...</h2>
+                <p class="section-subtitle">Tap any question to see the answer (or just text us)</p>
             </div>
 
             <div class="faq-container">
                 <div class="faq-item" onclick="toggleFaq(1)">
                     <div class="faq-question">
-                        <span>Do I need to be home for you to do the work?</span>
+                        <span>Do I need to be home?</span>
                         <span class="faq-arrow">▼</span>
                     </div>
                     <div class="faq-answer" id="faq1">
-                        Nope! Most of our customers aren't home. As long as we can access the area (gate code, side yard, etc.), we'll get it done and send you before/after photos when we're finished.
+                        Nope! Most customers aren't home. As long as we can access the area (gate code, side yard, etc.), we'll get it done and send you before/after photos.
                     </div>
                 </div>
 
@@ -1387,134 +1318,85 @@
                         <span class="faq-arrow">▼</span>
                     </div>
                     <div class="faq-answer" id="faq2">
-                        We accept cash, Venmo, Zelle, CashApp, or check. Pay when the job's done and you're happy with it. No payment upfront required.
+                        Cash, Venmo, Zelle, CashApp, or check. Pay when the job's done and you're happy. No payment upfront required.
                     </div>
                 </div>
 
                 <div class="faq-item" onclick="toggleFaq(3)">
                     <div class="faq-question">
-                        <span>What if I'm not sure what I need?</span>
+                        <span>Can you do same-day service?</span>
                         <span class="faq-arrow">▼</span>
                     </div>
                     <div class="faq-answer" id="faq3">
-                        No problem! Text us a photo or description and we'll tell you exactly what we recommend. We're here to help, not pressure you into anything.
+                        Usually, yes! We're young, fast, and flexible. Text us in the morning and there's a good chance we can swing by that afternoon or the next day.
                     </div>
                 </div>
 
                 <div class="faq-item" onclick="toggleFaq(4)">
                     <div class="faq-question">
-                        <span>Can you do same-day or next-day service?</span>
+                        <span>What if I need multiple services?</span>
                         <span class="faq-arrow">▼</span>
                     </div>
                     <div class="faq-answer" id="faq4">
-                        Usually, yes! We're young, fast, and flexible. Text us in the morning and there's a good chance we can swing by that afternoon or the next day. We'll always let you know our availability.
+                        We do combos all the time. Lawn + wash, palm + mulch, whatever. Tell us what you need — we'll bundle it and get you the best deal.
                     </div>
                 </div>
 
                 <div class="faq-item" onclick="toggleFaq(5)">
                     <div class="faq-question">
-                        <span>What if I need multiple services?</span>
+                        <span>Why should I hire you over a bigger company?</span>
                         <span class="faq-arrow">▼</span>
                     </div>
                     <div class="faq-answer" id="faq5">
-                        We do combos all the time. Lawn + wash, palm + mulch, whatever you need. Tell us what you're thinking — we'll bundle it and get you the best deal.
+                        Because we actually show up, answer our phones, and care about the result. Big companies send whoever's available. We send us. Every time.
                     </div>
                 </div>
             </div>
 
             <div style="text-align: center; margin-top: 48px;">
-                <p style="font-size: 1.2rem; font-weight: 700; color: #0f172a; margin-bottom: 16px;">Still have questions?</p>
+                <p style="font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">Still have questions?</p>
                 <a href="sms:+17703769981" class="btn btn-primary">💬 Text Us Anything</a>
             </div>
         </div>
     </section>
 
-    <!-- Discount Picker - Updated offers -->
-    <section class="discount-picker-section" id="discount-picker">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">🎁 Choose Your Reward</div>
-                <h2 class="section-title">Pick Your First-Time Bonus</h2>
-                <p class="section-subtitle">Select which offer works best for you — then lock it in with your free quote below</p>
-            </div>
+    <!-- Contact -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <h2 class="contact-title">Get Your Free Quote</h2>
+            <p class="contact-subtitle">Text us or fill out the form below. We respond within an hour.</p>
 
-            <div class="discount-options">
-                <div class="discount-card selected" onclick="selectDiscount('driveway', this)">
-                    <div class="popular-badge">MOST POPULAR</div>
-                    <div class="discount-icon">🧼</div>
-                    <div class="discount-title">Free Driveway Edge/Trim Add-On</div>
-                    <div class="discount-desc">With any pressure wash or lawn service. Makes the job pop even more.</div>
-                </div>
-
-                <div class="discount-card" onclick="selectDiscount('cleanup', this)">
-                    <div class="discount-icon">🌿</div>
-                    <div class="discount-title">Free Weed Spray or Debris Cleanup</div>
-                    <div class="discount-desc">Light cleanup or weed treatment included — your call.</div>
-                </div>
-
-                <div class="discount-card" onclick="selectDiscount('priority', this)">
-                    <div class="discount-icon">🚀</div>
-                    <div class="discount-title">Priority Scheduling</div>
-                    <div class="discount-desc">Get bumped to the front of the line and served fast — perfect for time-sensitive jobs.</div>
-                </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 48px;">
-                <p style="font-size: 1.15rem; font-weight: 600; color: #64748b; margin-bottom: 20px;">
-                    ✅ Selected: <span id="selectedOffer" style="color: #10b981; font-weight: 800;">Free Driveway Edge/Trim Add-On</span>
-                </p>
-                <a href="#contact-form" class="btn btn-primary" style="font-size: 1.2rem; padding: 20px 40px;">
-                    📝 Lock It In — Get Your Free Quote
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Form -->
-    <section class="contact-section" id="contact-form">
-        <div class="container">
-            <h2 class="section-title" style="color: white;">Ready to Get Started?</h2>
-            <p class="section-subtitle" style="color: rgba(255,255,255,0.9); margin-bottom: 40px;">Fill out the form below and we'll get back to you with a free quote same day!<br><strong style="color: #10b981;">Your bonus: <span id="offerInForm">Free Driveway Edge/Trim Add-On</span> ✅</strong></p>
-
-            <div class="contact-box">
-                <div class="contact-icon">📝</div>
-                <div class="contact-title">Get Your Free Quote</div>
-                
-                <form action="https://formspree.io/f/xldoyygj" method="POST" style="margin-top: 30px;">
-                    <input type="hidden" name="selected_offer" id="hiddenOffer" value="Free Driveway Edge/Trim Add-On">
-                    
-                    <div style="margin-bottom: 20px; text-align: left;">
-                        <label style="display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.95rem;">Name *</label>
-                        <input type="text" name="name" required style="width: 100%; padding: 14px 16px; border: 2px solid rgba(255,255,255,0.2); border-radius: 10px; font-size: 1rem; background: rgba(255,255,255,0.1); color: white; font-family: inherit;">
+            <div class="contact-form">
+                <form action="https://formspree.io/f/xldoyygj" method="POST">
+                    <div class="form-group">
+                        <label class="form-label">Name *</label>
+                        <input type="text" name="name" required class="form-input" placeholder="Your name">
                     </div>
 
-                    <div style="margin-bottom: 20px; text-align: left;">
-                        <label style="display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.95rem;">Phone Number *</label>
-                        <input type="tel" name="phone" required style="width: 100%; padding: 14px 16px; border: 2px solid rgba(255,255,255,0.2); border-radius: 10px; font-size: 1rem; background: rgba(255,255,255,0.1); color: white; font-family: inherit;">
+                    <div class="form-group">
+                        <label class="form-label">Phone Number *</label>
+                        <input type="tel" name="phone" required class="form-input" placeholder="(123) 456-7890">
                     </div>
 
-                    <div style="margin-bottom: 20px; text-align: left;">
-                        <label style="display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.95rem;">What are you looking for? (Optional)</label>
-                        <textarea name="service" rows="3" style="width: 100%; padding: 14px 16px; border: 2px solid rgba(255,255,255,0.2); border-radius: 10px; font-size: 1rem; background: rgba(255,255,255,0.1); color: white; font-family: inherit; resize: vertical;" placeholder="Pressure washing, lawn care, tree removal, etc."></textarea>
+                    <div class="form-group">
+                        <label class="form-label">What do you need? (Optional)</label>
+                        <textarea name="service" class="form-textarea" placeholder="Pressure washing, lawn care, tree removal, etc."></textarea>
                     </div>
 
-                    <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 10px;">
-                        ✅ Get My Free Quote + Lock In My Bonus
+                    <button type="submit" class="btn btn-primary form-submit">
+                        ✅ Get My Free Quote
                     </button>
                 </form>
 
-                <p class="contact-note" style="margin-top: 20px;">
-                    We usually respond within an hour during business hours.<br>
-                    <strong>Same-day service available!</strong>
-                </p>
-
-                <div style="margin-top: 30px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.2);">
-                    <p style="margin-bottom: 12px; font-size: 0.95rem; opacity: 0.9;">Or choose your preferred contact method:</p>
-                    <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-                        <a href="sms:+17703769981" class="btn" style="background: rgba(255,255,255,0.15); color: white; padding: 12px 24px; font-size: 0.95rem;">📱 Text Us</a>
-                        <a href="tel:+17703769981" class="btn" style="background: rgba(255,255,255,0.15); color: white; padding: 12px 24px; font-size: 0.95rem;">📞 Call Us</a>
+                <div class="contact-alt">
+                    <p>Or choose your preferred contact method:</p>
+                    <div class="contact-methods">
+                        <a href="sms:+17703769981" class="contact-method-btn">📱 Text Us</a>
+                        <a href="tel:+17703769981" class="contact-method-btn">📞 Call Us</a>
                     </div>
-                    <p style="margin-top: 12px;"><a href="tel:+17703769981" style="color: #3b82f6; font-size: 1.1rem; font-weight: 700; text-decoration: none;">770-376-9981</a></p>
+                    <p style="margin-top: 16px;">
+                        <a href="tel:+17703769981" style="color: var(--primary); font-size: 1.2rem; font-weight: 700; text-decoration: none;">770-376-9981</a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -1529,131 +1411,20 @@
             </div>
             <div class="footer-tagline">Young • Local • Ambitious</div>
             <div class="footer-bottom">
-                <p>© 2025 Blue Anchor Outdoors.</p>
-                <p style="margin-top: 8px; font-size: 0.85rem;">Pressure Washing • Lawn Care • Outdoor Services</p>
+                <p>© 2025 Blue Anchor Outdoors</p>
+                <p style="margin-top: 8px; font-size: 0.85rem;">
+                    Pressure Washing • Lawn Care • Outdoor Services
+                </p>
             </div>
         </div>
     </footer>
 
-    <!-- Floating Contact Button -->
-    <a href="#contact-form" class="floating-text" title="Get your free quote">
-        📝
+    <!-- Floating CTA -->
+    <a href="sms:+17703769981?body=Hi! I'd like to get a quote." class="floating-cta" title="Text for quote">
+        💬
     </a>
 
-    <!-- Exit Popup -->
-    <div class="exit-popup" id="exitPopup">
-        <div class="exit-popup-content">
-            <button class="exit-popup-close" onclick="closeExitPopup()">✕</button>
-            <div class="exit-popup-icon">🚨</div>
-            <h3>Wait! Don't Miss Your First-Time Bonus!</h3>
-            <p>Before you go, text us right now to lock in your bonus. It only takes 10 seconds.</p>
-            <a href="sms:+17703769981?body=Hi! I'd like to get a quote and lock in my first-time bonus." class="btn btn-primary">
-                📱 Text Us Now (770-376-9981)
-            </a>
-            <p style="margin-top: 16px; font-size: 0.9rem; color: #94a3b8;">Or <a href="#contact-form" onclick="closeExitPopup()" style="color: #3b82f6; font-weight: 600; text-decoration: underline;">fill out the quick form</a></p>
-        </div>
-    </div>
-
     <script>
-        // Progress Bar
-        window.addEventListener('scroll', () => {
-            const windowHeight = window.innerHeight;
-            const documentHeight = document.documentElement.scrollHeight;
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            const scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
-            document.getElementById('progressFill').style.width = scrollPercent + '%';
-        });
-
-        // Price Estimator - Updated with new logic
-        let selectedService = '';
-        
-        const serviceOptions = {
-            pressure: {
-                question: 'What type of area?',
-                options: [
-                    { id: 'any', label: 'Any Area', price: 'pricing-info', scrollToForm: true }
-                ],
-                note: 'We charge around $0.30/sq ft — most pros charge $0.35–$0.55',
-                customMessage: 'Fill out the form below for an exact free quote!'
-            },
-            lawn: {
-                question: 'What size lawn?',
-                options: [
-                    { id: 'small', label: 'Small Lawn', price: [30, 50] },
-                    { id: 'medium', label: 'Medium Lawn', price: [50, 80] },
-                    { id: 'large', label: 'Large Lawn', price: [80, 150] },
-                    { id: 'not-sure', label: 'Not Sure', price: [40, 100] }
-                ],
-                note: 'This is just a ballpark. Your exact quote might be different based on specific details.'
-            },
-            palm: {
-                question: 'How many trees?',
-                options: [
-                    { id: '1-2', label: '1-2 Trees', price: [70, 120] },
-                    { id: '3-5', label: '3-5 Trees', price: [150, 300] },
-                    { id: '6+', label: '6+ Trees', price: '400+' },
-                    { id: 'not-sure', label: 'Not Sure', price: [100, 300] }
-                ],
-                note: 'Final price depends on tree height, location, and disposal needs.'
-            },
-            mulch: {
-                question: 'What do you need?',
-                options: [
-                    { id: 'any', label: 'Any Mulch/Landscape Work', price: 'custom', scrollToForm: true }
-                ],
-                note: 'Custom Quote — fill out the form for a fast estimate!',
-                customMessage: 'Every project is unique. Fill out the form below and we\'ll get you a quote fast!'
-            },
-            other: {
-                question: 'Tell us what you need',
-                options: [
-                    { id: 'describe', label: 'Just describe it – we\'ll help', price: 'custom', scrollToForm: true }
-                ],
-                note: 'Every project is unique. Text or call us and we\'ll give you a custom quote!'
-            }
-        };
-
-
-        function selectService(service) {
-            selectedService = service;
-            const config = serviceOptions[service];
-            
-            document.getElementById('step2Question').textContent = config.question;
-            
-            const optionsHtml = config.options.map(opt => 
-                `<button class="estimator-btn" onclick="selectSize('${opt.id}')">${opt.label}</button>`
-            ).join('');
-            
-            document.getElementById('step2Options').innerHTML = optionsHtml;
-            
-            document.getElementById('step1').classList.add('hidden');
-            document.getElementById('step2').classList.remove('hidden');
-        }
-
-        function selectSize(size) {
-            const config = serviceOptions[selectedService];
-            const option = config.options.find(opt => opt.id === size);
-            
-            if (option.price === null) {
-                // For "other" service
-                document.getElementById('estimatePrice').textContent = 'Custom Quote';
-                document.getElementById('estimateNote').textContent = config.note;
-            } else {
-                document.getElementById('estimatePrice').textContent = `${option.price[0]} - ${option.price[1]}`;
-                document.getElementById('estimateNote').textContent = config.note;
-            }
-            
-            document.getElementById('step2').classList.add('hidden');
-            document.getElementById('result').classList.remove('hidden');
-        }
-
-        function resetEstimator() {
-            document.getElementById('step1').classList.remove('hidden');
-            document.getElementById('step2').classList.add('hidden');
-            document.getElementById('result').classList.add('hidden');
-            selectedService = '';
-        }
-
         // FAQ Toggle
         function toggleFaq(num) {
             const item = document.getElementById('faq' + num).parentElement;
@@ -1666,63 +1437,7 @@
             }
         }
 
-        // Discount Picker - Updated
-        const offerNames = {
-            'driveway': 'Free Driveway Edge/Trim Add-On',
-            'cleanup': 'Free Weed Spray or Debris Cleanup',
-            'priority': 'Priority Scheduling'
-        };
-
-        function selectDiscount(offer, card) {
-            document.querySelectorAll('.discount-card').forEach(c => c.classList.remove('selected'));
-            card.classList.add('selected');
-            
-            const offerText = offerNames[offer];
-            document.getElementById('selectedOffer').textContent = offerText;
-            document.getElementById('offerInForm').textContent = offerText;
-            document.getElementById('hiddenOffer').value = offerText;
-        }
-
-        // Exit Intent Popup (Mobile)
-        let exitPopupShown = false;
-        let lastY = 0;
-
-        document.addEventListener('touchmove', (e) => {
-            const currentY = e.touches[0].clientY;
-            
-            if (currentY < lastY - 100 && window.scrollY < 100 && !exitPopupShown) {
-                showExitPopup();
-            }
-            
-            lastY = currentY;
-        });
-
-        // Exit Intent Popup (Desktop)
-        document.addEventListener('mouseout', (e) => {
-            if (!e.toElement && !e.relatedTarget && !exitPopupShown && e.clientY < 10) {
-                showExitPopup();
-            }
-        });
-
-        function showExitPopup() {
-            if (!exitPopupShown) {
-                document.getElementById('exitPopup').classList.add('show');
-                exitPopupShown = true;
-            }
-        }
-
-        function closeExitPopup() {
-            document.getElementById('exitPopup').classList.remove('show');
-        }
-
-        // Close popup when clicking outside
-        document.getElementById('exitPopup').addEventListener('click', (e) => {
-            if (e.target.id === 'exitPopup') {
-                closeExitPopup();
-            }
-        });
-
-        // Image slider functionality
+        // Image Slider
         const sliders = {};
 
         function initSlider(sliderId) {
@@ -1739,7 +1454,6 @@
                 label: label
             };
 
-            // Create dots
             for (let i = 0; i < totalSlides; i++) {
                 const dot = document.createElement('div');
                 dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
@@ -1771,26 +1485,22 @@
             const offset = -sliderData.currentIndex * 100;
             sliderData.slider.style.transform = `translateX(${offset}%)`;
 
-            // Update dots
             const dots = document.querySelectorAll(`#dots${sliderId} .slider-dot`);
             dots.forEach((dot, index) => {
                 dot.classList.toggle('active', index === sliderData.currentIndex);
             });
 
-            // Update label
             sliderData.label.textContent = sliderData.currentIndex % 2 === 0 ? 'BEFORE' : 'AFTER';
         }
 
-        // Initialize sliders on page load
+        // Initialize sliders
         window.addEventListener('DOMContentLoaded', () => {
-            initSlider(1);
-            initSlider(2);
-            initSlider(3);
-            initSlider(4);
-            initSlider(5);
+            for (let i = 1; i <= 5; i++) {
+                initSlider(i);
+            }
         });
 
-        // Add touch/swipe support for mobile
+        // Touch swipe support
         let touchStartX = 0;
         let touchEndX = 0;
 
@@ -1808,14 +1518,20 @@
         });
 
         function handleSwipe(sliderId) {
-            if (touchEndX < touchStartX - 50) {
-                moveSlide(sliderId, 1);
-            }
-            if (touchEndX > touchStartX + 50) {
-                moveSlide(sliderId, -1);
-            }
+            if (touchEndX < touchStartX - 50) moveSlide(sliderId, 1);
+            if (touchEndX > touchStartX + 50) moveSlide(sliderId, -1);
         }
-    </script>
 
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
